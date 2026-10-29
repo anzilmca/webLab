@@ -1,0 +1,103 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.nav{
+    display:flex;
+    gap:4px;
+}
+
+.item{
+    flex:1;
+}
+
+#items2{
+    gap:15px;
+    display:flex;
+    align-items:center;
+}
+
+.single{
+    cursor:pointer;
+}
+
+.single:hover{
+    text-decoration:underline;
+}
+
+.acnt{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background-color:gray;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+    cursor:pointer;
+    margin-left:auto;
+}
+
+#user{
+    font-size:14px;
+    margin-left:5px;
+}
+</style>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const username = params.get("username");
+
+const fetchdata = () => {
+    const user = document.getElementById("user");
+    user.textContent = username;
+}
+
+console.log(username);
+</script>
+
+</head>
+
+<body onload="fetchdata()">
+
+<nav class="nav">
+
+    <div class="item">
+        ABC
+    </div>
+
+    <div class="item" id="items2">
+
+        <div class="single">
+            Home
+        </div>
+
+        <div class="single">
+            About
+        </div>
+
+        <div class="single">
+            Contact
+        </div>
+
+        <div class="acnt">
+            👤
+            <h2 id="user"></h2>
+        </div>
+
+    </div>
+
+</nav>
+
+<hr>
+
+<div>
+    <h1>Hero Image</h1>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+<head>
+<script>
+const ChangeBackground = () => {
+ let colors = ["green","red","blue","yellow"]
+ let color = colors[Math.floor(Math.random()*colors.length)]
+ document.body.style.backgroundColor = color 
+}
+
+function ChangeRGBBackground(){
+ let code = "#"
+ for(let i=0;i<6;i++){
+   let rgb = Math.floor(Math.random()*9)
+   code+= rgb
+ }
+ document.body.style.backgroundColor = code 
+}
+</script>
+</head>
+<body>
+<button onClick="ChangeBackground()">change BG</button>
+<button onClick="ChangeRGBBackground()">change BG using RGB</button>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  let userData = [
+    {username:"Anzil",
+     password:"123"
+    },
+    {
+     username:"john",
+     password:321
+    }
+  ]
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const user = userData.find(function(user){
+        return user.username === username && user.password === password;
+    });
+
+    if(user){
+	alert("Login Succesful") 
+	window.location.href = "welcome.html?username=" + username   
+    }else{
+        alert("Invalid username or password");
+    }
+
+}
+</script>
+<style>
+*{
+ padding:0;
+ margin:0;
+ box-sizing:border-box;
+}
+body{
+color:white;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ min-height:100vh;
+}
+form{
+ text-align:center;
+}
+.container{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ flex-direction:column;
+ width:400px;
+ height:400px;
+padding:20px;
+ background-color:black;
+}
+.btn{
+ background-color:red;
+ padding:5px;
+ cursor:pointer;
+ margin:auto;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Login Page</h1><br><br>
+<form onsubmit="handleSubmit(event)">
+<label for="username">Username</label>
+<input type="text" id="username" required> <br><br>
+<label for="password">Password</label>
+<input type="password" id="password" required> <br><br>
+<button class="btn" type="Submit">Submit</button>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<input type="number" id="val1" placeholder="Enter num 1">
+
+<input type="number" id="val2" placeholder="Enter num 2">
+
+<button type="Submit" onClick="addNum()">Add</button>
+
+<h2 id="res"></h2>
+<script>
+
+let val1 = document.getElementById("val1")
+let val2 = document.getElementById("val2")
+let res = document.getElementById("res")
+
+function addNum(){
+  let num1 = Number(val1.value);
+  let num2 = Number(val2.value);
+ res.textContent = num1 + num2
+}
+
+
+
+
+</script>
+</body>
+</html>

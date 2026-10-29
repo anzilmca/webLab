@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript outputs</title>
+</head>
+<body>
+<h1>Types of js outputs</h1>
+<button onClick="handleClick()">Click Here</button>
+<h2 id="text"></h2>
+<script>
+function handleClick(){
+ window.alert("Alert output")
+ console.log("console output")
+ document.getElementById("text").innerHTML = "inner html output"
+ 
+setTimeout(()=>{
+ document.write("Using document.write() method");
+},[3000])
+}
+</script>
+</body>
+</html>

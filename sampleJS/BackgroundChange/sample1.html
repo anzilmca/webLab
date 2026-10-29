@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Background Change</title>
+<style>
+*{
+ margin : 0;
+ padding : 0;
+ box-sizing : border-box;
+}
+body{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ min-height:100vh;
+}
+
+.container{
+ display : flex;
+ flex-direction: column;
+gap:10px;
+}
+
+button{
+ padding:12px;
+ backgroundColor : black;
+}
+</style>
+
+<script>
+
+const changeBg = () => {
+	
+  document.body.style.backgroundImage = "none"
+
+  let colors = ["red","green","blue","orange","black","yellow"]
+  let color = Math.floor(Math.random(colors) * colors.length)
+  
+  document.body.style.backgroundColor = colors[color]
+}
+
+const resetColor = () => {
+ document.body.style.backgroundImage = "none"
+}
+
+const changeBgImage = () => {
+  document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80')"
+  
+}
+
+</script>
+</head>
+<body>
+<div class="container">
+<button onClick="changeBg()">Change Background color</button>
+<button onClick ="changeBgImage()">Change background image</button>
+<button onclick="resetColor()">reset</button>
+</div>
+</body>
+</html>

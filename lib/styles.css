@@ -1,0 +1,19 @@
+
+
+body{
+ background-color:lightblue;
+}
+
+h1{
+ color:red;
+}
+
+h2{
+ color:green;
+}
+
+.section{
+ height:200px;
+ width:400px;
+ background-color:white;
+}
